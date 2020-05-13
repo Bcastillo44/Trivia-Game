@@ -6,8 +6,11 @@
 
 body{
 	margin: 0;
-	background: white;
-	border: 5px solid blue;
+	/*border: 5px solid blue;*/
+	position: relative;
+	background: url(https://i.imgur.com/MiaZvhi.png);
+	background-size: cover;
+	background-repeat: no-repeat;
 	
 }
 
@@ -20,54 +23,54 @@ h1{
 .board-container{
 	position: relative;
 	margin: 10px;
-	border: 5px solid green;
+	/*border: 5px solid green;*/
 	height: auto;
 
 }
 
 .header{
-	border: 5px solid yellow;
+	/*border: 5px solid yellow;*/
 	margin: auto;
 	text-align: center;
 	margin-bottom: 50px;
-	width: 800px;
+	width: 900px;
 	font-size: 60px;
 }
 
 .categories{
 	display: flex;
 	justify-content: space-between;
-	border: 5px solid brown;
-	font-size: 
+	/*border: 5px solid brown;*/
+	font-size: 25px;
 }
 
 .fears{
-	border: 5px solid black;
+	/*border: 5px solid black;*/
 	justify-content: center;
 	margin: 5px;
 	text-align: center;
 }
 
 .ancient{
-	border: 5px solid black;
+	/*border: 5px solid black;*/
 	justify-content: center;
 	margin: 5px;
 	text-align: center;
 }
 .literature{
-	border: 5px solid black;
+/*	border: 5px solid black;*/
 	justify-content: center;
 	margin: 5px;
 	text-align: center;
 }
 .relative{
-	border: 5px solid black;
+	/*border: 5px solid black;*/
 	justify-content: center;
 	margin: 5px;
 	text-align: center;
 }
 .lightning{
-	border: 5px solid black;
+	/*border: 5px solid black;*/
 	justify-content: center;
 	margin: 5px;
 	text-align: center;
@@ -77,7 +80,7 @@ h1{
 	display: grid;
 	grid-template-rows: repeat(8, auto);
 	grid-gap: 15px;
-	border: 5px solid red;
+	/*border: 5px solid red;*/
 	justify-content: center;
 	margin: auto;
 	padding: auto;
@@ -88,7 +91,7 @@ h1{
 .card{
 	background-color: white;
 	height: 100px;
-	width: 200px;
+	width: 150px;
 	border: 5px solid black;
 }
 
