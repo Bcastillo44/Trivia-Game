@@ -4,6 +4,7 @@ const modals = document.querySelectorAll(".modal");
 const modalCloseButtons = document.querySelectorAll(".modal-close");
 
 
+
 modalTriggerButtons.forEach(elem => {
 	elem.addEventListener("click", event => toggleModal(event.currentTarget.getAttribute("data-modal-target")));
 });
@@ -26,7 +27,6 @@ document.addEventListener("keydown", event => {
 	}
 });
 
-
 function toggleModal(modalId) {
 	const modal = document.getElementById(modalId);
 
@@ -48,42 +48,139 @@ function toggleModal(modalId) {
 }
 
 
-// var questions = [
-//      {
-//            prompt: "What is Monica’s biggest pet peeve?\n(A) Animals dressed as humans\n\ (B) Rearranging her furniture\n(C) Dirty apartments",
-//            answer: "a"
-//      },
-//      {
-//           prompt: "According to Chandler, what phenomenon scares the bajesus out of him?\n(A) Clowns\n\ (B) Goldfish Crackers\n(C) Michael Flatley Lord of the Dance",
-//           answer: "c"
-//      },
-//      {
-//           prompt: "Who pees on Monica’s leg when she gets stung by a jellyfish?\n(A) Joey\n\ (B) Ross\n(C) Chandler",
-//           answer: "a"
-//      }
-// ];
+const questionText = document.querySelector(".Question");
 
-// var indexCardOne = document.querySelector(".card_one_fears_btn");
+const optionBox = document.querySelector(".Options");
 
-// indexCardOne.addEventListener("click", runQuestions, false);
+const questionIndex = 1;
 
-// function runQuestions(e){
-// 	var clickedItem = e.target.element;
-// 	for(var i = 0; i < questions.length; i++){
-//      var response = window.prompt(questions[i].prompt);
-//      if(response == questions[i].answer){
-//           score++;
-//           alert("Correct!");
-//      } else {
-//           alert("Sorry, that's incorrect!");
-//      }
+let score = 0;
+
+// const questionTextTwo = document.querySelector(".Question-Two");
+
+// const questionIndexTwo = 1;
+
+
+triviaApp = 
+	[
+
+  		{
+
+    question: 'What is Monica’s biggest pet peeve?',
+    options: ['Animals dressed as humans', 'Rearranging her furniture', 'Dirty apartments'],
+    answer: 1
+
+		},
+
+
+		 {
+
+      question: 'What is the name of Ross’ first wife?',
+      options: ['Emily','Susan', 'Carol'],
+      answer: 2
+
+     	},
+
+    ]
+
+
+// console.log(triviaApp.length);
+
+
+function load(){
+	questionText.innerHTML=triviaApp[questionIndex].question;
+	createOptions();
+	// questionTextTwo.innerHTML=triviaApp[questionIndexTwo].question;
+}
+
+function createOptions(){
+
+	for(let i = 0; i < triviaApp[questionIndex].options.length; i++){
+		const option=document.createElement("div");
+		option.innerHTML=triviaApp[questionIndex].options[i];
+		option.classList.add("option");
+		option.id=i;
+		option.setAttribute("onclick", "check(this)");
+		optionBox.appendChild(option);
+	}
+
+}
+
+function check(ele){
+	const id=ele.id;
+	if(id==triviaApp[questionIndex].answer){
+		alert("correct");
+	}	
+	else{
+		alert("wrong");
+	}
+
+	disableOptions()
+	// showAnswerDescription();
+	// showNextQuestionBtn();
+}
+
+function disableOptions(){
+	for(let i = 0; i < optionBox.children.length; i++){
+		optionBox.children[i].classList.add("already-answered")
+	}
+}
+
+// function
+
+
+window.onload= () => {
+	load();
+}
+
+
+
+
+
+
+
+
+// function load(){
+// 	questionTextTwo.innerHTML=triviaApp[questionIndexTwo].question;
 // }
-// alert("you got " + score + "/" + questions.length);
+
+// window.onload= () => {
+// 	load();
+// }
+
+
+
+
+
+
+
+
+
+// function startQuestions(){
 	
 // }
-// // console.log(questions);
 
-// var score = 0;
+// function myFunction() {
+//   document.querySelector(".card").innerHTML = "What is Monica’s biggest pet peeve?";
+
+// }
+
+
+// const cardButton = document.querySelector('.card')
+
+// document.addEventListener('click', startQuestions, true);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -103,9 +200,7 @@ function toggleModal(modalId) {
 //      }
 // ];
 
-// var indexCardOne = document.querySelector(".card_one_ancient");
 
-// indexCardOne.addEventListener("click", runQuestions, false);
 
 // function runQuestions(e){
 // 	var clickedItem = e.target.element;
@@ -113,12 +208,12 @@ function toggleModal(modalId) {
 //      var response = window.prompt(questions[i].prompt);
 //      if(response == questions[i].answer){
 //           score++;
-//           alert("Correct!");
+//           console.log("Correct!");
 //      } else {
-//           alert("Sorry, that's incorrect!");
+//           console.log("Sorry, that's incorrect!");
 //      }
 // }	
-// 	alert("You got " + score + "/" + questions.length);
+// 	console.log("You got " + score + "/" + questions.length);
 	
 // }
 // // console.log(questions);
@@ -205,28 +300,6 @@ function toggleModal(modalId) {
 
 
 
-// const questions = [
-//   {
-//     question: 'What is Monica’s biggest pet peeve?',
-//     answers: [
-//       { text: 'Animals dressed as humans', correct: true },
-//       { text: 'Rearranging her furniture', correct: false },
-//       { text: 'Dirty apartments', correct: false}
-//     ]
-//   }
-//  ]
-
-// function startQuestions(){
-	
-// }
-
-// function myFunction() {
-//   document.querySelector(".card").innerHTML = "What is Monica’s biggest pet peeve?";
-// }
-
-
-
-
 // const startButton = document.getElementById('start-button')
 // const nextButton = document.getElementById('next-button')
 
@@ -245,6 +318,3 @@ function toggleModal(modalId) {
 //   setNextQuestion()
 // }
 
-// const cardButton = document.querySelector('.card')
-
-// document.addEventListener('click', startQuestions, true);
