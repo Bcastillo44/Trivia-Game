@@ -9,7 +9,7 @@
 
 </head>
 <body>
-<!-- 
+
 	<div class="board-container">			
 		<h1 class="header">F.R.I.E.N.D.S TRIVIA GAME</h1>
 
@@ -18,29 +18,45 @@
 				<div class="fears">	
 					<h2>FEARS & PET PEEVES</h2>
 						<div class="card-container">
-							<button type="button" class="card_one_fears_btn">1</button> -->
 
 
-						<button>Show Modal</button>
+						<!-- <button type="button" class="card_one_fears_btn">1</button> -->
+
+						<button data-modal-target="card_one_fears_btn">1</button>
+						<button data-modal-target="modal2">2</button>
+						<button data-modal-target="modal3">3</button>
 
 
-							<div class="modal">
-
+							<div class="modal" id="card_one_fears_btn">
 								<div class="modal-content">
-
 									<span class="modal-close">&times;</span>
-
-										<h1>Modal Title</h1>
-
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque blanditiis velit, pariatur. Sint enim quos molestias asperiores nesciunt! Molestias atque delectus incidunt, dolorum sequi eaque, aliquam enim aliquid laudantium explicabo.</p>
-
+										<h1>What is Monica’s biggest pet peeve?</h1>
+											<p>(A) Animals dressed as humans 
+											(B) Rearranging her furniture
+											(C) Dirty apartments</p>
 								</div>
+							</div>
 
+
+							<div class="modal" id="modal2">
+								<div class="modal-content">
+									<span class="modal-close">&times;</span>
+										<h1>Modal Title 2 </h1>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque blanditiis velit, pariatur. Sint enim quos molestias asperiores nesciunt! Molestias atque delectus incidunt, dolorum sequi eaque, aliquam enim aliquid laudantium explicabo.</p>
+								</div>
+							</div>
+
+							<div class="modal" id="modal3">
+								<div class="modal-content">
+									<span class="modal-close">&times;</span>
+										<h1>Modal Title 3</h1>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque blanditiis velit, pariatur. Sint enim quos molestias asperiores nesciunt! Molestias atque delectus incidunt, dolorum sequi eaque, aliquam enim aliquid laudantium explicabo.</p>
+								</div>
 							</div>
 
 
 
-							<!-- <div class="card"></div>
+							<div class="card"></div>
 							<div class="card"></div>
 							<div class="card"></div>
 							<div class="card"></div>
@@ -49,6 +65,8 @@
 							<div class="card"></div>
 						</div>
 				</div>		
+				
+
 				
 
 				<div class="ancient">
@@ -108,10 +126,10 @@
 							<div class="card"></div>
 							<div class="card"></div>	
 					</div>					
-				</div> -->
-	<!-- 		</div>
+				</div>
+			</div>
 	</div>
- -->
+
 
 	<script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>

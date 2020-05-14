@@ -17,6 +17,11 @@ button{
 	margin: 0.75rem;
 	padding: 0.25rem;
 	cursor: pointer;
+	background-color: white;
+	height: 100px;
+	width: 150px;
+	border: 5px solid black;
+	font-size: 30px;
 }
 
 .modal{
@@ -35,12 +40,64 @@ button{
 }
 
 .modal.modal-show{
-	animation: fadeIn 0.5s ease-in-out forwards;
+	animation: fadeIn 0.1s ease-in-out forwards;
 }
 
 .modal.modal-hide{
+	animation: fadeOut 0.1s ease-in-out 0.1s forwards;
+}
+
+
+
+.modal-content {
+	background-color: white;
+	width: 50%;
+	max-height: 75%;
+	margin: 2rem;
+	padding: 2rem;
+	border-radius: 0.25rem;
+	box-shadow: 0 4px 20px black;
+	overflow: auto;
+	list-style-type: circle; 
+}
+
+.modal.modal-show .modal-content{
+	animation: fadeInDown 0.5s ease-in-out forwards;
+}
+
+.modal.modal-hide .modal-content{
 	animation: fadeOut 0.5s ease-in-out forwards;
 }
+
+
+.modal-content h1{
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.modal-content p{
+	margin: 1rem 0;
+	line-height: 1.5rem;
+}
+
+.modal-close{
+	position: absolute;
+	top: 0;
+	right: 0px;
+	font-size: 1.75rem;
+	font-weight: bold;
+	padding: 0 0.75rem;
+	color: black;
+	cursor: pointer;
+	user-select: none;
+
+}
+
+.modal-close:hover, .modal-close:focus{
+	color: grey;
+}
+
+/* Animations */
 
 @keyframes fadeIn {
 	0% {
@@ -58,25 +115,6 @@ button{
 	100% {
 		opacity: 0;
 	}
-}
-
-.modal-content {
-	background-color: white;
-	width: 50%;
-	max-height: 75%;
-	margin: 2rem;
-	padding: 2rem;
-	border-radius: 0.25rem;
-	box-shadow: 0 4px 20px black;
-	overflow: auto;
-}
-
-.modal.modal-show .modal-content{
-	animation: fadeInDown 0.5s ease-in-out forwards;
-}
-
-.modal.modal-hide .modal-content{
-	animation: fadeOut 0.5s ease-in-out forwards;
 }
 
 @keyframes fadeInDown {
@@ -101,37 +139,21 @@ button{
 	}
 }
 
-.modal-content h1{
-	text-align: center;
-	margin-bottom: 2rem;
+
+@media(max-width: 992px) {
+	html { font-size: 14px; }
+	.modal-content { width: 80%; }
 }
 
-.modal-content p{
-	margin: 1rem 0;
-	line-height: 1.5rem;
+@media(max-width: 767px) {
+	html { font-size: 12px; }
+	.modal-content { padding: 2rem 1rem 1rem 1rem; width: 90%; }
+	.modal-content h2 { margin-bottom: 1.5rem; }
 }
 
-.modal-close{
-	position: absolute;
-	top: 0;
-	right: 20px;
-	font-size: 1.75rem;
-	font-weight: bold;
-	padding: 0 0.75rem;
-	color: black;
-	cursor: pointer;
-	user-select: none;
-
-}
-
-/* .modal-close:hover, .modal-close:focus{
-	color: black;
-} */
 
 
-
-/*
-
+/* 
 
 body{
 	margin: 0;
@@ -226,13 +248,8 @@ h1{
 	border: 5px solid black;
 }
 
-.card_one_fears_btn{
-	background-color: white;
-	height: 100px;
-	width: 150px;
-	border: 5px solid black;
-	font-size: 30px;
-}
+
+
 
 .card_one_ancient{
 	background-color: white;
@@ -258,11 +275,16 @@ h1{
 	font-size: 30px;
 }
 
-*/
+ */
 
 
 
-
-
+.card_one_fears_btn{
+	background-color: white;
+	height: 100px;
+	width: 150px;
+	border: 5px solid black;
+	font-size: 30px;
+}
 
 
