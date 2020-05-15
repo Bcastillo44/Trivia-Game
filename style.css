@@ -101,10 +101,15 @@ button{
 	border-radius: 50%;
 }
 
+.stats .quiz-time .remaining-time.less-time{
+
+	color: red;
+	border-color: red;
+}
+
 .stats .score-board .correct-answers{
 
 	font-weight: 800;
-
 
 }
 
@@ -194,30 +199,64 @@ button{
 	justify-content: space-between;
 }
 
- .Question .Option-box .Options{
+.Option-box .option{
 
 	background-color: #ffffff;
-	/* flex-basis: calc(50% - 20px);
-	max-width: calc(50% - 20px); */
+	flex-basis: calc(50% - 20px);
+	max-width: calc(50% - 20px);
 	margin-top: 30px;
 	padding: 14px 15px;
 	text-align: center;
 	font-size: 20px;
 	text-transform: uppercase;
 	font-weight: 500;
-	color: green;
+	color: black;
 	border: 2px solid black;
 	border-radius: 30px;
 	cursor: pointer;
+	position: relative;
 	
 }
 
-.see-results-btn{
-/* 	display: none; */
+.next-question{
 
 }
 
-.Option-box .Options.already-answered{
+
+
+.see-result-btn{
+
+	display: none;
+
+} 
+
+
+.next-question-btn{
+
+	display: none;
+
+}
+
+.next-question-btn.show{
+
+	display: inline-block;
+}
+
+.see-result-btn.show{
+
+	display: inline-block;
+
+}
+
+/* .Option-box .option.already-answered{
+
+	background-color: #11c466;
+	border-color: #059e4c;
+	color: #ffffff;
+
+} */
+
+.Option-box .option.correct{
 
 	background-color: #11c466;
 	border-color: #059e4c;
@@ -225,23 +264,50 @@ button{
 
 }
 
-.Option-box .Options.correct{
-
-	background-color: #11c466;
-	border-color: #059e4c;
-	color: #ffffff;
-
-}
-
-.Option-box .Options.wrong{
+.Option-box .option.wrong{
 
 	background-color: #f85943;
 	border-color: #d23723;
 	color: #ffffff;
-
+	animation: shake 1s linear;
 
 }
 
+.Option-box .option.wrong::before{
+
+	content: '';
+	positon: absolute;
+	background-color: red;
+	height: 30px;
+	width: 30px;
+	right: 15px;
+	top:10px;
+
+}
+
+@keyframes shake{
+	0%,30%,50%{
+		transform: translateX(10px);
+	}
+	20%, 40%{
+		transform: translateX(-10px);
+	}
+	60%{
+		transform: translateX(-7px);
+	}
+	70%{
+		transform: translateX(7px);
+	}
+	80%{
+		transform: translateX(-4px);
+	}
+	90%{
+		transform: translateX(4px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
+}
 
 
 
@@ -257,8 +323,8 @@ button{
 
 .modal-content {
 	background-color: white;
-	width: 50%;
-	max-height: 75%;
+	width: 75%;
+	max-height: 100%;
 	margin: 2rem;
 	padding: 2rem;
 	border-radius: 0.25rem;
@@ -308,7 +374,7 @@ button{
 
 
 
-Animations
+/* Animations */
 
 @keyframes fadeIn {
 	0% {
@@ -330,22 +396,22 @@ Animations
 
 @keyframes fadeInDown {
 	0% {
-		/* opacity: 0;
+		opacity: 0;
 		transform: translateY(-3rem);
 	}
 	100% {
-		/* opacity: 1; */
+		opacity: 1;
 		transform: translateY(0);
 	}
 }
 
 @keyframes fadeOutUp {
 	0% {
-		/* opacity: 1; */
+		opacity: 1;
 		transform: translateY(0);
 	}
 	100% {
-		/* opacity: 0; */
+		opacity: 0; */
 		transform: translateY(-3rem);
 	}
 }
@@ -363,130 +429,6 @@ Animations
 }
 
 
-
-/* 
-
-body{
-	margin: 0;
-	border: 5px solid blue;
-	position: relative;
-	background: url(https://i.imgur.com/MiaZvhi.png);
-	background-size: cover;
-	background-repeat: no-repeat;
-	
-}
-
-h1{
-	font-style: italic;
-	
-}
-
-
-.board-container{
-	position: relative;
-	margin: 10px;
-	border: 5px solid green;
-	height: auto;
-
-}
-
-.header{
-	border: 5px solid yellow;
-	margin: auto;
-	text-align: center;
-	margin-bottom: 50px;
-	width: 900px;
-	font-size: 60px;
-}
-
-.categories{
-	display: flex;
-	justify-content: space-between;
-	border: 5px solid brown;
-	font-size: 25px;
-}
-
-
-.fears{
-	border: 5px solid black;
-	justify-content: center;
-	margin: 5px;
-	text-align: center;
-}
-
-.ancient{
-	border: 5px solid black;
-	justify-content: center;
-	margin: 5px;
-	text-align: center;
-}
-.literature{
-	border: 5px solid black;
-	justify-content: center;
-	margin-top: 50px;
-	text-align: center;
-}
-.relative{
-	border: 5px solid black;
-	justify-content: center;
-	margin: 5px;
-	text-align: center;
-}
-.lightning{
-	border: 5px solid black;
-	justify-content: center;
-	margin: 5px;
-	text-align: center;
-}
-
-.card-container{
-	display: grid;
-	grid-template-rows: repeat(8, auto);
-	grid-gap: 15px;
-	border: 5px solid red;
-	justify-content: center;
-	margin: auto;
-	padding: auto;
-	position: relative;
-
-}
-
-.card{
-	background-color: white;
-	height: 100px;
-	width: 150px;
-	font-size: 30px;
-	border: 5px solid black;
-}
-
-
-
-
-.card_one_ancient{
-	background-color: white;
-	height: 100px;
-	width: 150px;
-	border: 5px solid black;
-	font-size: 30px;
-}
-
-.card_one_literature{
-	background-color: white;
-	height: 100px;
-	width: 150px;
-	border: 5px solid black;
-	font-size: 30px;
-}
-
-.card_one_relative{
-	background-color: white;
-	height: 100px;
-	width: 150px;
-	border: 5px solid black;
-	font-size: 30px;
-}
-
- */
 
 
 
