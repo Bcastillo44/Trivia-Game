@@ -52,7 +52,7 @@ const questionText = document.querySelector(".Question");
 
 const optionBox = document.querySelector(".Options");
 
-const questionIndex = 1;
+const questionIndex = 0;
 
 let score = 0;
 
@@ -68,7 +68,7 @@ triviaApp =
 
     question: 'What is Monica’s biggest pet peeve?',
     options: ['Animals dressed as humans', 'Rearranging her furniture', 'Dirty apartments'],
-    answer: 1
+    answer: 0
 
 		},
 
@@ -91,6 +91,7 @@ function load(){
 	questionText.innerHTML=triviaApp[questionIndex].question;
 	createOptions();
 	// questionTextTwo.innerHTML=triviaApp[questionIndexTwo].question;
+	
 }
 
 function createOptions(){
@@ -110,6 +111,8 @@ function check(ele){
 	const id=ele.id;
 	if(id==triviaApp[questionIndex].answer){
 		alert("correct");
+		score++;
+		// scoreBoard();
 	}	
 	else{
 		alert("wrong");
@@ -122,18 +125,19 @@ function check(ele){
 
 function disableOptions(){
 	for(let i = 0; i < optionBox.children.length; i++){
-		optionBox.children[i].classList.add("already-answered")
+		optionBox.children[i].classList.add("already-answered");
 	}
 }
 
-// function
+// function scoreBoard(){
+
+// 	correctAnswer.innerHTML=score;
+// }
 
 
 window.onload= () => {
 	load();
 }
-
-
 
 
 
@@ -147,36 +151,6 @@ window.onload= () => {
 // window.onload= () => {
 // 	load();
 // }
-
-
-
-
-
-
-
-
-
-// function startQuestions(){
-	
-// }
-
-// function myFunction() {
-//   document.querySelector(".card").innerHTML = "What is Monica’s biggest pet peeve?";
-
-// }
-
-
-// const cardButton = document.querySelector('.card')
-
-// document.addEventListener('click', startQuestions, true);
-
-
-
-
-
-
-
-
 
 
 
