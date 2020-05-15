@@ -26,6 +26,8 @@ body{
 h1{
 	font-style: italic;
 	font-size: 100px;
+	color: white;
+	justify-content: space-between;
 	
 }
 
@@ -184,7 +186,7 @@ button{
 	overlfow: auto;
 	display: none;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 
 }
 
@@ -196,7 +198,7 @@ button{
 .Question .Option-box{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
 }
 
 .Option-box .option{
@@ -215,6 +217,7 @@ button{
 	border-radius: 30px;
 	cursor: pointer;
 	position: relative;
+	justify-content: center;
 	
 }
 
