@@ -277,192 +277,192 @@ function nextQuestion(){
 
 function gameOver(){
 	nextQuestionBtn.classList.remove("show");
-	seeResultBtn.classList.add("show");
+	// seeResultBtn.classList.add("show");
 }
 
-seeResultBtn.addEventListener("click",()=>{
-	console.log("hi");
-})
+// seeResultBtn.addEventListener("click",()=>{
+// 	// console.log("hi");
+// })
 
 
-// window.onload= () => {
-// 	// load();
-// 	generateRandomQuestion();
-// 	// startTimer();
+window.onload= () => {
+	// load();
+	generateRandomQuestion();
+	// startTimer();
+
+}
+
+
+
+
+
+
+
+
+
+// const questionTextTwo = document.querySelector(".Question-Two");
+
+// const optionBoxTwo = document.querySelector(".Option-box-two");
+
+// const nextQuestionBtnTwo = document.querySelector(".next-question-btn-two");
+
+// const correctAnswersTwo = document.querySelector(".correct-answers-two");
+
+// const seeResultBtnTwo = document.querySelector(".see-result-btn-two");
+
+// const remainingTimeTwo = document.querySelector(".remaining-time-two");
+
+
+// let myArrayTwo = [];
+
+// let questionIndexTwo = 0;
+
+// let scoreTwo = 0;
+
+// let numberSecond = 0;
+
+// // let interval;
+
+
+// triviaAppTwo = 
+// 	[
+
+//   		{
+
+//     questionTwo: 'What is the name of Ross’ first wife?',
+//     optionsTwo: ['Carol', 'Emily', 'Susan'],
+//     answerTwo: 0
+
+// 		},
+
+
+// 		 {
+
+//       questionTwo: 'What was the original name of the show?',
+//       optionsTwo: ['Monks Cafe','Central Perk', 'Insomnia Cafe'],
+//       answerTwo: 2
+
+//      	},
+
+//      	 {
+
+//       questionTwo: 'Who was Rachel supposed to marry in the pilot episode?',
+//       optionsTwo: ['Larry','Barry', 'Moe'],
+//       answerTwo: 1
+
+//      	},
+
+//      	 {
+
+//       questionTwo: 'What was the name of the woman Ross used to dress up as a child?',
+//       optionsTwo: ['Lee','Bee', 'Big Fat Goalie'],
+//       answerTwo: 1
+
+//      	},
+
+//      	 {
+
+//       questionTwo: 'How many divorces has Ross had?',
+//       optionsTwo: ['Two', "Four" , 'Three'],
+//       answerTwo: 2
+
+//      	},
+     	
+//      	 {
+
+//       questionTwo: 'What was the name of Monica and Ross’ pet dog?',
+//       optionsTwo: ['Lacey','Chi-Chi', 'La Pou'],
+//       answerTwo: 1
+
+//      	}
+
+//     ]
+
+
+// // console.log(triviaApp.length);
+
+
+// function loadTwo(){
+// 	numberSecond++;
+// 	questionTextTwo.innerHTML=triviaAppTwo[questionIndexTwo].questionTwo;
+// 	createOptionsTwo();
+// 	scoreBoardTwo();
+	
+// }
+
+// function createOptionsTwo(){
+
+// 	optionBoxTwo.innerHTML="";
+
+// 	for(let i = 0; i < triviaAppTwo[questionIndexTwo].optionsTwo.length; i++){
+// 		const optionTwo=document.createElement("div");
+// 		optionTwo.innerHTML=triviaAppTwo[questionIndexTwo].optionsTwo[i];
+// 		optionTwo.classList.add("optionTwo");
+// 		optionTwo.id=i;
+// 		optionTwo.setAttribute("onclick", "check(this)");
+// 		optionBoxTwo.appendChild(optionTwo);
+// 	}
 
 // }
 
+// function generateRandomQuestionTwo(){
+// 	const randomNumberTwo = Math.floor(Math.random() * triviaAppTwo.length);
+// 	// console.log(randomNumber);
+// 	// console.log(myArrayTwo.length);
+// 	let hitDuplicate=0;
 
+// 	if(myArrayTwo.length == 0){
+// 		questionIndexTwo=randomNumberTwo;
+// 	}
 
+// 	else{
 
+// 		for(let i=0; i < myArrayTwo.length; i++){
+// 			if(randomNumberTwo == myArrayTwo[i]){
+// 				// console.log("duplicate random Number:" + randomNumber);
+// 				// hitDuplicate=1;
+// 				// console.log("duplicate found:" + randomNumber);
+// 			}
 
+// 		}
 
+// 		if(hitDuplicate == 1){
+// 			generateRandomQuestionTwo();
+// 			return;
+// 		}
 
+// 		else{
+// 			questionIndexTwo=randomNumberTwo;
+// 		}
 
-
-const questionTextTwo = document.querySelector(".Question-Two");
-
-const optionBoxTwo = document.querySelector(".Option-box-two");
-
-const nextQuestionBtnTwo = document.querySelector(".next-question-btn-two");
-
-const correctAnswersTwo = document.querySelector(".correct-answers-two");
-
-const seeResultBtnTwo = document.querySelector(".see-result-btn-two");
-
-const remainingTimeTwo = document.querySelector(".remaining-time-two");
-
-
-let myArrayTwo = [];
-
-let questionIndexTwo = 0;
-
-let scoreTwo = 0;
-
-let numberSecond = 0;
-
-// let interval;
-
-
-triviaAppTwo = 
-	[
-
-  		{
-
-    questionTwo: 'What is the name of Ross’ first wife?',
-    optionsTwo: ['Carol', 'Emily', 'Susan'],
-    answerTwo: 0
-
-		},
-
-
-		 {
-
-      questionTwo: 'What was the original name of the show?',
-      optionsTwo: ['Monks Cafe','Central Perk', 'Insomnia Cafe'],
-      answerTwo: 2
-
-     	},
-
-     	 {
-
-      questionTwo: 'Who was Rachel supposed to marry in the pilot episode?',
-      optionsTwo: ['Larry','Barry', 'Moe'],
-      answerTwo: 1
-
-     	},
-
-     	 {
-
-      questionTwo: 'What was the name of the woman Ross used to dress up as a child?',
-      optionsTwo: ['Lee','Bee', 'Big Fat Goalie'],
-      answerTwo: 1
-
-     	},
-
-     	 {
-
-      questionTwo: 'How many divorces has Ross had?',
-      optionsTwo: ['Two', "Four" , 'Three'],
-      answerTwo: 2
-
-     	},
-     	
-     	 {
-
-      questionTwo: 'What was the name of Monica and Ross’ pet dog?',
-      optionsTwo: ['Lacey','Chi-Chi', 'La Pou'],
-      answerTwo: 1
-
-     	}
-
-    ]
-
-
-// console.log(triviaApp.length);
-
-
-function loadTwo(){
-	numberSecond++;
-	questionTextTwo.innerHTML=triviaAppTwo[questionIndexTwo].questionTwo;
-	createOptionsTwo();
-	scoreBoardTwo();
+// 	}
 	
-}
-
-function createOptionsTwo(){
-
-	optionBoxTwo.innerHTML="";
-
-	for(let i = 0; i < triviaAppTwo[questionIndexTwo].optionsTwo.length; i++){
-		const optionTwo=document.createElement("div");
-		optionTwo.innerHTML=triviaAppTwo[questionIndexTwo].optionsTwo[i];
-		optionTwo.classList.add("optionTwo");
-		optionTwo.id=i;
-		optionTwo.setAttribute("onclick", "check(this)");
-		optionBoxTwo.appendChild(optionTwo);
-	}
-
-}
-
-function generateRandomQuestionTwo(){
-	const randomNumberTwo = Math.floor(Math.random() * triviaAppTwo.length);
-	// console.log(randomNumber);
-	// console.log(myArrayTwo.length);
-	let hitDuplicate=0;
-
-	if(myArrayTwo.length == 0){
-		questionIndexTwo=randomNumberTwo;
-	}
-
-	else{
-
-		for(let i=0; i < myArrayTwo.length; i++){
-			if(randomNumberTwo == myArrayTwo[i]){
-				// console.log("duplicate random Number:" + randomNumber);
-				// hitDuplicate=1;
-				// console.log("duplicate found:" + randomNumber);
-			}
-
-		}
-
-		if(hitDuplicate == 1){
-			generateRandomQuestionTwo();
-			return;
-		}
-
-		else{
-			questionIndexTwo=randomNumberTwo;
-		}
-
-	}
-	
-	myArrayTwo.push(randomNumberTwo);
-	// console.log(myArray);
-	loadTwo();
-}
+// 	myArrayTwo.push(randomNumberTwo);
+// 	// console.log(myArray);
+// 	loadTwo();
+// }
 
 
-function check(ele){
-	const id=ele.id;
-	if(id==triviaAppTwo[questionIndexTwo].answerTwo){
-		ele.classList.add("correct");
-		scoreTwo++;
-		scoreBoardTwo();
-	}	
-	else{
-		ele.classList.add("wrong");
-	}
+// function check(ele){
+// 	const id=ele.id;
+// 	if(id==triviaAppTwo[questionIndexTwo].answerTwo){
+// 		ele.classList.add("correct");
+// 		scoreTwo++;
+// 		scoreBoardTwo();
+// 	}	
+// 	else{
+// 		ele.classList.add("wrong");
+// 	}
 
-	// disableOptions()
-	// showAnswerDescription();
-	showNextQuestionBtnTwo();
+// 	// disableOptions()
+// 	// showAnswerDescription();
+// 	showNextQuestionBtnTwo();
 
-	 if(numberSecond == triviaAppTwo.length){
-      gameOverTwo();
-    }
+// 	 if(numberSecond == triviaAppTwo.length){
+//       gameOverTwo();
+//     }
 	// stopTimer();
-}
+// }
 
 // function startTimer(){
 
@@ -497,45 +497,45 @@ function check(ele){
 // 	}
 // }
 
-function showNextQuestionBtnTwo(){
-	nextQuestionBtnTwo.classList.add("show");
-}
+// function showNextQuestionBtnTwo(){
+// 	nextQuestionBtnTwo.classList.add("show");
+// }
 
-function hideNextQuestionBtnTwo(){
-	nextQuestionBtnTwo.classList.add("show");
-}
+// function hideNextQuestionBtnTwo(){
+// 	nextQuestionBtnTwo.classList.add("show");
+// }
 
-function scoreBoardTwo(){
+// function scoreBoardTwo(){
 
-	correctAnswersTwo.innerHTML=scoreTwo;
-}
+// 	correctAnswersTwo.innerHTML=scoreTwo;
+// }
 
-nextQuestionBtnTwo.addEventListener("click", nextQuestionTwo);
+// nextQuestionBtnTwo.addEventListener("click", nextQuestionTwo);
 
-function nextQuestionTwo(){
-	// questionIndex++;
-	generateRandomQuestionTwo();
-	hideNextQuestionBtnTwo();
-	// startTimer();
-}
+// function nextQuestionTwo(){
+// 	// questionIndex++;
+// 	generateRandomQuestionTwo();
+// 	hideNextQuestionBtnTwo();
+// 	// startTimer();
+// }
 
-function gameOverTwo(){
-	nextQuestionBtnTwo.classList.remove("show");
-	seeResultBtnTwo.classList.add("show");
-}
+// function gameOverTwo(){
+// 	nextQuestionBtnTwo.classList.remove("show");
+// 	seeResultBtnTwo.classList.add("show");
+// }
 
-seeResultBtnTwo.addEventListener("click",()=>{
-	// console.log("hi");
-})
+// seeResultBtnTwo.addEventListener("click",()=>{
+// 	// console.log("hi");
+// })
 
 
-window.onload= () => {
-	// load();
-	generateRandomQuestion();
-	generateRandomQuestionTwo();
-	// startTimer();
+// window.onload= () => {
+// 	// load();
+// 	// generateRandomQuestion();
+// 	generateRandomQuestionTwo();
+// 	// startTimer();
 
-}
+// }
 
 
 
